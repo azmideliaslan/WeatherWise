@@ -1,0 +1,40 @@
+*{
+  margin:0;
+  font-family: "Open Sans",sans-serif;
+}
+main{
+  padding:10px;
+  background-color: white;
+}
+.container {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.input{
+  text-align: center;
+  margin: 100px auto;
+}
+.input input[type="text"]{
+  width: 600px;
+  height: 55px;
+  padding: 5px 10px;
+  background: whitesmoke;
+  border: none;
+  border-radius: 1px;
+  font-weight:bold;
+  font-size: 1.3em;
+}
+
+footer{
+  height: 50px;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: black;
+  color: white;
+  font-size: 1.1em;
+}
