@@ -3,8 +3,8 @@
 Weather Site - getting instant temperature information
 
 
-Project About:
+Project About:<br>
 Simple site that u can see the temperature which city u want to learn. <br>
-What are u waiting for?
-Start with your current location!
+What are u waiting for?<br>
+Start with your current location!<br>
 
