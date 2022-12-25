@@ -9,17 +9,22 @@ What are u waiting for?<br>
 Start with your current location!<br>
 <br>
 Live Demo: 
-https://azmideliaslan.github.io/WeatherWise/
+- https://azmideliaslan.github.io/WeatherWise/
 
-
-Changelog
+ 
+Changelog v0.8
 ## Bug Fixes
-- Fixed an issue where the application crashed when the user tried to save a file. (issue #123)
-- Improved the error handling for invalid input.
+- When we click "enter" at the input area, it didn t  submit before, it fixed
 
 ## New Features
-- Added a new feature that allows users to customize the color scheme of the application. (pull request #456)
+- Added a new feature that allows users to change language between en and tr
 - Improved the performance of the application by optimizing the code.
+- The tempeture now is Celcius
 
 ## Other Changes
-- Updated the documentation with new instructions for using the application.
+- if city name not valid, alert will occure that which language u are at
+- First main paragraph rewrited
+- Improved some css code
+
+First Commit - v0.7
+## The site published in github
