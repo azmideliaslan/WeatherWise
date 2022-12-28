@@ -12,7 +12,7 @@ Start with your current location!<br>
 ## Live Demo: 
 - https://azmideliaslan.github.io/WeatherWise/
 
-## Changelog v0.8.1
+## Changelog v0.9.0
 
 ### New Features
 - Allows users to add more cities at same page
@@ -23,7 +23,7 @@ Start with your current location!<br>
 - Language change buttons are next to the site title
 - UI design improved 
 
-## Changelog v0.8
+## Changelog v0.8.0
 
 ### New Features
 - Allows users to change language between en and tr
@@ -39,5 +39,5 @@ Start with your current location!<br>
 - First main paragraph rewrited
 - Improved some css code
 
-## First Commit - v0.7
+## First Commit - v0.7.0
 ### The site published in github
