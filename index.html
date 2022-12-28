@@ -7,35 +7,33 @@
 		<link rel="stylesheet" href="style.css">
 	</head>
 	<body>
-			<header>
-        <table class="lang">
-          <tr>
-            <td class="tdlang"><span id="en" class="button_lang current_lang">EN</span></td>
-            <td class="tdlang"><span id="tr" class="button_lang">TR</span></td>
-          </tr>
-        </table>
-      </header>
     	<main>
-      		<div class="container">
-      			<div class="translation english" id="translate">
-      				<h1 class="mainT">Welcome to WeatherWise</h1>
-	      			<h3 class="mainP">Weather Site - Getting Instant Temperature Information</h3>
-      			</div>
-      			<div class="input">
-			      	<div class="input">
-							   <input type="text" placeholder="Enter the city" class="input_text" id="city-input">
-							   <button value="Submit" class="submit" id="submit-button">Submit</button>
-							</div>
-			    </div>
-			    <div class="container">
-				    <div class="card">
-					    <h1 class="name" id="name"></h1>
-					    <p class="temp"></p>
-					    <p class="desc"></p>
-				    </div>
-				</div>
+      		<div class="head_container">
+      			<div style="width:20%"></div>
+	      		<div class="translation english" id="translate" style="width:60%">
+	      			<h1 class="mainT">Welcome to WeatherWise</h1>
+		      		<h3 class="mainP">Weather Site - Getting Instant Temperature Information</h3>
+	      		</div>
+	      		<div style="width:20%">
+	      			<table class="lang">
+			          <tr>
+			            <td class="tdlang"><span id="en" class="button_lang current_lang">EN</span></td>
+			            <td class="tdlang"><span id="tr" class="button_lang">TR</span></td>
+			          </tr>
+			        </table>
+	      		</div>
+	      	</div>
+	      	<div class="input_container">
+	      		<div class="input">
+							<input type="text" placeholder="Enter the city" class="input_text" id="input_text">
+							<button value="Submit" class="submit" id="submit-button">Submit</button>
+						</div>
+					 </div>
+					 <div class="card_container">
+						  
       		</div>
     	</main>
+
     	<footer>
       		<p>Developed at 2022 | Powered By Azmi DELIASLAN</p>
     	</footer>
@@ -43,3 +41,4 @@
     	<script src="lang.js"></script>
     </body>
 </html>
+

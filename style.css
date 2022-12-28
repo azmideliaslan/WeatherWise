@@ -1,85 +1,124 @@
-*{
+html{
+  --bg_dark: #06283D;
+  --bg_light: white;
+  --text_dark: #06283D;
+  --text_light: white;
+  --buton_bg_color: #1363DF;
+  --buton_bg_hover_color: #0A2AF5;
   margin:0;
-  font-family: "Open Sans",sans-serif;
-}
-main{
-  padding:10px;
-  background-color: white;
-}
-.container {
-  width: 80%;
-  margin: 0 auto;
+  padding:0;
+  font: 1rem/1.3 "Open Sans", sans-serif;
 }
 
-.input{
-  text-align: center;
-  margin: 100px auto;
+body{
+  background: var(--bg_dark);
+  color: var(--bg_light);
+  margin: 0!important;
 }
-.input input[type="text"]{
-  width: 600px;
-  height: 55px;
+
+main{
+  padding: 20px;
+}
+
+/*----- WEATHERWISE CONTENT AND LANG BUTTONS STYLE -----*/
+.head_container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+  display: flex;
+}
+
+/*----- INPUT STYLE -----*/
+.input_container{
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+}
+
+.input_container .input{
+  text-align: center;
+  margin: 50px auto;
+  position: relative;
+}
+.input_container input{
+  width: 50%;
+  height: 40px;
   padding: 5px 10px;
   background: whitesmoke;
   border: none;
-  border-radius: 1px;
+  border-radius: 5px;
+  border-bottom: 2px solid;
   font-weight:bold;
   font-size: 1.3em;
 }
 
-.card{
-  width: 50%;
-  background: whitesmoke;
-  height: 40vh;
-  margin: 50px auto;
-  border-radius: 2px;
-}
-
-
-.close{
-  float: right;
-  margin-top: -2px;
-  cursor: pointer;
-  margin-right: 20px;
-}
-button {
-  background-color: blue;
-  color: white;
-  font-size: 16px;
+.input_container  button {
+  font-size: 1rem;
+  font-weight: bold;
+  letter-spacing: 0.1em;
   padding: 10px 20px;
-  border: none;
+  margin-left: 15px;
   border-radius: 5px;
+  color: var(--text_light);
+  background: var(--buton_bg_color);
+  transition: background 0.3s ease-in-out;
   cursor: pointer;
 }
 
-button:hover {
-  background-color: darkblue;
+.input_container  button:hover {
+  background: var(--buton_bg_hover_color);
 }
 
-button:active {
-  background-color: navy;
-}
 
-.card h1{
-  padding: 5px 0;
-  text-align: center;
-}
+/*----- CITY CARD/S STYLE -----*/
 
-.card p{
-  text-align: center;
-  margin:40px 0;
-  font-size:1.3em;
-}
-
-footer{
-  height: 50px;
-  width: 100%;
+.card_container {
+  color: var(if --bg_dark: --text_light);
   display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: black;
-  color: white;
-  font-size: 1.1em;
+  flex-wrap: wrap;
+  justify-content: space-around;
 }
+
+.card {
+  background-color: var(--bg_light);
+  color: var(--text_dark);
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  width: 300px;
+  height: 350px;
+  margin: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  padding: 16px;
+}
+
+.name {
+  font-size: 2em;
+  font-weight: bold;
+  margin: 0;
+  text-align: center;
+}
+
+.temp {
+  font-size: 4.4em;
+  font-weight: bold;
+  margin: 0;
+}
+
+.desc {
+  font-size: 1.3em;
+  font-weight: 400;
+  margin: 0;
+}
+.card_container sup{
+  font-size: 0.5em;
+}
+
+/*----- LANGUAGE STYLES -----*/
 
 .lang {
   margin: 0 auto;
@@ -88,22 +127,26 @@ footer{
 .button_lang {
   cursor: pointer;
   display: inline-block;
-  padding: 0.25em 0em;
-  border-radius: 10px;
-  width: 5em;
-  transition: 0.25s ease;
-}
-
-.button_lang:hover {
-  background: #b5d6b2;
-  transition: 0.25s ease;
+  padding: 0.25em 0.25em;
+  border-radius:3px;
 }
 
 .current_lang {
-  background: #b5d6b2;
+  background: #1363DF;
 }
 
 .translation {
   text-align: center;
   margin: 0.5em;
+}
+
+/*----- FOOTER STYLES -----*/
+
+footer{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 1.3em;
 }
