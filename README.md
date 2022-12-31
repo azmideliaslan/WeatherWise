@@ -1,4 +1,5 @@
 <img src="ss.png" width="90%">
+
 # WeatherWise
 
 # Weather Site - getting instant temperature information
