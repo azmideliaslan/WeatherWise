@@ -6,7 +6,8 @@ var input = document.querySelector('.input_text');
 var main = document.querySelector('#city');
 var temp = document.querySelector('.temp');
 var desc = document.querySelector('.desc');
-var button= document.querySelector('.submit');
+var button = document.querySelector('.submit');
+var country = document.querySelector('.country');
 
 input.addEventListener("keydown", function(event) {if (event.key === "Enter") {submitInput();}});
 button.addEventListener("click", submitInput);
@@ -18,40 +19,32 @@ function submitInput() {
   var lang;
   var element = document.querySelector(".translation");
   var secondClass = element.classList[1];
-  if(secondClass == "turkish"){
-    lang = 'tr';
-  }
-  else if(secondClass == "english"){
-    lang = 'en';
-  }
-  else{
-    lang = 'en';
-  }
+  if(secondClass == "turkish"){lang = 'tr';}
+  else if(secondClass == "english"){lang = 'en';}
+  else{lang = 'en';}
+
   //getting data from my api in openmatter
   let query = `${url}weather?q=${input.value}&appid=${key}&units=metric&lang=${lang}`
   fetch(query).then(response => response.json()).then(data => {
   var tempValue = data['main']['temp'];
   var nameValue = data['name'];
   var descValue = data['weather'][0]['description'];
+  var countryValue = data['sys']['country'];
   //Adding more cities option 
   let city = {
       name: nameValue,
       temp: tempValue,
-      desc: descValue
+      desc: descValue,
+      country: countryValue
     }
-
     cities.push(city);
     input.value ="";
     displayCities();
-
 })
 
 .catch(err => {
-  if (lang === "tr") {
-    alert("Lütfen geçerli bir şehir adı girin!");
-  } else {
-    alert("Please enter a valid city name!");
-  }
+  if (lang === "tr") {alert("Lütfen geçerli bir şehir adı girin!");} 
+  else {alert("Please enter a valid city name!");}
 });
 
 }
@@ -64,10 +57,21 @@ function displayCities() {
     let card = document.createElement('div');
     card.classList.add('card');
     card.innerHTML = `
-      <h1 class="name">${cities[i].name}</h1>
+      <h1 class="name">${cities[i].name}<sup class="country">${cities[i].country}</sup></h1>
       <p class="temp">${Math.round(cities[i].temp)}<sup>°C<sup></p>
       <p class="desc">${cities[i].desc.toUpperCase()}</p>
+      <button class="delete" data-index="${i}">Delete</button>
     `;
     container.appendChild(card);
   }
+  // Add event listeners to delete buttons
+  let deleteButtons = document.querySelectorAll('.delete');
+  deleteButtons.forEach(button => {
+    button.addEventListener('click', function() {
+      let index = this.getAttribute('data-index');
+      cities.splice(index, 1);
+      displayCities();
+    });
+  });
 }
+

@@ -13,16 +13,26 @@ Start with your current location!<br>
 ## Live Demo: 
 - https://azmideliaslan.github.io/WeatherWise/
 
-## Changelog v0.9.0
+## Other Links:
+- https://medium.com/@azmideliaslan/weatherwise-learn-how-to-make-basic-weather-site-df397e6f66eb
+
+## Future Plans
+- adding bg image or gif to cards according to weather info
+- adding dark/light mode
+- maybe the time of that city
+
+## Changelog v1.0.0
 
 ### New Features
-- Allows users to add more cities at same page
-- Made mobile friendly
+- You can delete the cities you added
+- The country code was placed next to the city
+
+### Bug Fixes
+- Adding same city name bug fixed
 
 ### Other Changes
-- City card frontend redesigned
-- Language change buttons are next to the site title
-- UI design improved 
+- Delete button added and style impv.
+- Country code style impv.
 
 ## Changelog v0.8.0
 
@@ -34,7 +44,6 @@ Start with your current location!<br>
 ### Bug Fixes
 - When we click "enter" at the input area, it didn t  submit before, it fixed
 
-
 ### Other Changes
 - if city name not valid, alert will occure that which language u are at
 - First main paragraph rewrited
@@ -42,3 +51,6 @@ Start with your current location!<br>
 
 ## First Commit - v0.7.0
 ### The site published in github
+
+More about openweather usage:
+https://openweathermap.org/current
