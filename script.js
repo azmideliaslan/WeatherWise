@@ -36,10 +36,18 @@ function submitInput() {
       temp: tempValue,
       desc: descValue,
       country: countryValue
+  }
+  if (cities.find(city => city.name === nameValue)) {
+    if (lang === "tr") {
+      alert("Bu şehir zaten eklenmiş!");
+    } else {
+      alert("This city has already been added!");
     }
-    cities.push(city);
-    input.value ="";
-    displayCities();
+    return;
+  }
+  cities.push(city);
+  input.value ="";
+  displayCities();
 })
 
 .catch(err => {
